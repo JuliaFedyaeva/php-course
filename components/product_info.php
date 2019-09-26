@@ -4,13 +4,12 @@
     <div class="item-img">
       <img src="<?= $img_url ?>" width="510" height="392" alt="<?= $title ?>">
     </div>
-<!-- Здесь блок с нумерацией, рядом с фото. -->
     <div>
       <ul>
-        <?php while ($photo_cur <= $photo_num): ?>
-        <li><a href="<?=$photo_cur;?>"></a></li>
+        <?php while ($index <= $num): ?>
+        <li><?=$features[$index];?></li>
       </ul>
-      <?php $photo_cur = $photo_cur + 1;?>
+      <?php $index = $index + 1;?>
       <?php endwhile;?>
     </div>
     <div class="item-buy">

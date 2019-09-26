@@ -10,8 +10,9 @@ $discount = 1000;
 $is_new = true;
 $is_last = true;
 $product_class = "item";
-$photo_cur = 2;
-$photo_num = get_colors_num($id);
+$features = ["Натуральные материалы", "Экологичность", "Большой срок службы", "Гарантия возврата"];
+$index = 0;
+$num = count($features);
 
 if ($discount > 0) {
   $price_with_discount = $price - $discount;
@@ -24,11 +25,6 @@ if ($discount > 1400 || $is_last) {
 
 if ($is_new) {
   $product_class = $product_class . " item-new";
-}
-
-while ($photo_cur < $photo_num) {
-  keks_log($photo_cur);
-  $photo_cur = $photo_cur + 1;
 }
 
 require("components/product_info.php");
