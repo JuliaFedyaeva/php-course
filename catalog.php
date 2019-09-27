@@ -41,6 +41,8 @@ $param = [
 
 $index = 1;
 $number = count($param);
+$index_color = 0;
+$num_color = count($colors);
 
 require("components/products_list.php");
 require("components/footer.php");

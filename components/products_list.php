@@ -10,10 +10,10 @@
           <span class="price"><?=$param[index]['price']; ?></span>
           <img src="<?=$param[index]['photo']; ?>" width="156" height="120" alt="<?=$param[index]['name']; ?>">
           <ul class="parametrs">
-            <li><?=$param[index]['height']; ?></li>
-            <li><?=$param[index]['width']; ?></li>
-            <li><?=$param[index]['weight']; ?></li>
-            <li><?=$param[index]['color']; ?></li>
+            <?php while ($index_color < $num_color): ?>
+            <li><?=$param[index]['colors'][$index_color]; ?></li>
+            <?php $index_color ++; ?>
+            <?php endwhile; ?>
           </ul>
         </a>
       </li>
