@@ -5,11 +5,12 @@ require("components/header.php");
 $id = $_GET["product_id"];
 $title = get_product_title($id);
 $img_url = get_img_url($id);
-$price = 2000;
-$discount = 1000;
-$is_new = true;
-$is_last = true;
+$price = get_product_price($id);
+$discount = get_product_discount($id);
+$is_new = get_product_is_new($id);
+$is_last = get_product_is_last($id);
 $product_class = "item";
+
 $features = ["Натуральные материалы", "Экологичность", "Большой срок службы", "Гарантия возврата"];
 $index = 0;
 $num = count($features);
@@ -20,7 +21,6 @@ if ($discount > 0) {
 
 if ($discount > 1400 || $is_last) {
   $product_class = $product_class . " item-hot";
-  keks_log($product_class);
 };
 
 if ($is_new) {
