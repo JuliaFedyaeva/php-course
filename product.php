@@ -10,7 +10,7 @@ $discount = get_product_discount($id);
 $is_new = get_product_is_new($id);
 $is_last = get_product_is_last($id);
 $product_class = "item";
-
+// Студенты создают переменные ниже
 $features = ["Натуральные материалы", "Экологичность", "Большой срок службы", "Гарантия возврата"];
 $index = 0;
 $num = count($features);

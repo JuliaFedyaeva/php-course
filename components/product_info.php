@@ -6,6 +6,7 @@
     </div>
     <div>
       <ul>
+      <!--  Студенты пишут цикл на перебор простого массива первой задачей -->
         <?php while ($index < $num): ?>
         <li><?=$features[$index];?></li>
         <?php $index = $index + 1;?>
