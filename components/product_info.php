@@ -6,11 +6,11 @@
     </div>
     <div>
       <ul>
-        <?php while ($index <= $num): ?>
+        <?php while ($index < $num): ?>
         <li><?=$features[$index];?></li>
+        <?php $index = $index + 1;?>
+        <?php endwhile;?>
       </ul>
-      <?php $index = $index + 1;?>
-      <?php endwhile;?>
     </div>
     <div class="item-buy">
       <div class="price">
