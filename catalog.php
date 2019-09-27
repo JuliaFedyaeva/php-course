@@ -41,7 +41,7 @@ $param = [
 ];
 
 // Переменные, которые пишут студенты
-$index = 1;
+$index = 0;
 $number = count($param);
 $index_color = 0;
 $num_colors = count($colors);
