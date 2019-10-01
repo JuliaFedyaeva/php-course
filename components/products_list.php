@@ -4,22 +4,20 @@
 
     <ul class="products-list">
     <!-- Студенты пишут циклы ниже -->
-      <?php while ($index < $number): ?>
+    <?php foreach( $items as $key => $value ): ?>
       <li>
         <a class="product-card" href="#">
-          <h3><?=$param[$index]['name']; ?></h3>
-          <span class="price"><?=$param[$index]['price']; ?></span>
-          <img src="<?=$param[$index]['photo']; ?>" width="156" height="120" alt="<?=$param[$index]['name']; ?>">
+          <h3><?=$value['name']; ?></h3>
+          <span class="price"><?=$value['price']; ?></span>
+          <img src="<?=$value['photo']; ?>" width="156" height="120" alt="<?=$value['name']; ?>">
           <ul class="parametrs">
             <?php while ($index_color < $colors): ?>
-            <li><?=$param[$index]['colors'][$index_color]; ?></li>
-            <?php $index_color ++; ?>
+            <li><?=$items[$index]['colors'][$index_color]; ?></li>
             <?php endwhile; ?>
           </ul>
         </a>
       </li>
-      <?php $index ++; ?>
-      <?php endwhile; ?>
+      <?php endforeach; ?>
     </ul>
   </div>
 </section>

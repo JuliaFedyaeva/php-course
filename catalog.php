@@ -2,7 +2,7 @@
 require("components/header.php");
 
 // Массив, с которым будут работать студенты
-$param = [
+$items = [
   0 => [
   'photo' => 'img/item-mseyulida.jpg',
   'name' => 'Лампа Мсеюлида',
@@ -42,9 +42,9 @@ $param = [
 
 // Переменные, которые пишут студенты
 $index = 0;
-$number = count($param);
+$number = count($items);
 $index_color = 0;
-$colors = count($param[$index]['colors']);
+$colors = count($items[$index]['colors']);
 
 require("components/products_list.php");
 require("components/footer.php");
